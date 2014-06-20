@@ -45,6 +45,12 @@ RUN bash -c 'source golang-crosscompile/crosscompile.bash && go-crosscompile-bui
 RUN echo "source /golang-crosscompile/crosscompile.bash" >> /root/.bashrc
 RUN cp -f /root/.bashrc /.bashrc
 
+# go for vim
+RUN cd /workspace/src
+RUN git clone git://github.com/chenjianlong/my-vim
+RUN cd my-vim
+RUN ./my_vim.sh
+
 # misc
 WORKDIR /workspace
 
