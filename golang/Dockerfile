@@ -3,7 +3,7 @@
 
 FROM ubuntu:14.04
 
-MAINTAINER "Jianlong Chen"
+MAINTAINER "Jianlong Chen <jianlong99@gmail.com>"
 
 # Update package repository
 RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe multiverse" > /etc/apt/sources.list
@@ -26,7 +26,7 @@ RUN mkdir -p /workspace/pkg
 RUN mkdir -p /usr/local/go
 RUN cd /usr/local/go
 
-RUN hg clone https://code.google.com/p/go -r release-branch.go1.2 /usr/local/go
+RUN hg clone https://code.google.com/p/go -r release-branch.go1.3 /usr/local/go
 RUN cd /usr/local/go/src && bash -c './all.bash'
 
 # env
