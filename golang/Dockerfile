@@ -11,7 +11,7 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 # Required packages
-RUN apt-get install -y vim zip wget curl git mercurial build-essential
+RUN apt-get install -yfq vim zip wget curl git mercurial build-essential
 
 # bashrc
 RUN cp -f /root/.bashrc /.bashrc
