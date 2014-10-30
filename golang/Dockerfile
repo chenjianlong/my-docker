@@ -6,7 +6,6 @@ FROM ubuntu:14.04
 MAINTAINER "Jianlong Chen <jianlong99@gmail.com>"
 
 # Update package repository
-RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe multiverse" > /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get upgrade -y
 
